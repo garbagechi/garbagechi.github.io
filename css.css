@@ -1,0 +1,18 @@
+body{
+    background: url(backgroundimg.jpg) center center;
+    background-size: cover;
+}
+#container
+{
+
+    width: 100%;
+    text-align: center;
+}
+#imgc{
+    border: 1px solid #fff;
+    border-radius: 100%;
+}
+h1{
+
+ text-shadow: 0 10px 7px rgba(162, 214, 20, 0.5);
+}
