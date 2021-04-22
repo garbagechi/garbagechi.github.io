@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://yxge.net/article/27 -->
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>在x64的Ubuntu系统下安装64bit的交叉编译工具aarch64-linux-gnu-gcc - 忆信格</title>
+    <meta name="description" content="在x64的Ubuntu系统下安装64bit的交叉编译工具aarch64-linux-gnu-gcc">
+    <meta name="keywords" content="ubuntu,linux,aarch64,gcc">
+    <link rel="stylesheet" type="text/css" href="index.css" media="all">
+    <link rel="icon" href="http://yxge.net/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="hexahedr.css">
+    <style>
+        .pagination {
+            margin: auto;
+        }
+
+        ul > .active > span {
+            color: #999;
+            cursor: default;
+        }
+
+        .pagination ul > li > a:hover, .pagination ul > li > a:focus, .pagination ul > .active > a, .pagination ul > .active > span {
+            background-color: #f5f5f5;
+        }
+
+        .pagination ul > li > a, .pagination ul > li > span {
+            float: left;
+            padding: 4px 12px;
+            line-height: 20px;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-left-width: 0;
+        }
+    </style>
+</head>
+<div id="page_begin_html">
+	<!--添加立方体-->
+	<a name="top"></a>
+	<!--PageBeginHtml Block Begin-->
+	<!--旋转正方体 start-->
+	<div class="wrap">
+		<!--包裹所有元素的容器-->
+		<div class="cube">
+		<!-- 大正方体 -->
+		<!-- 前面图片 -->
+		<div class="out_front"><img src="six_max_01.png" class="pic"></div>
+		<!-- 后面图片 -->
+		<div class="out_back"><img src="six_max_02.png" class="pic"></div>
+		<!-- 左面图片 -->
+		<div class="out_left"><img src="six_max_03.png" class="pic"></div>
+		<!-- 右面图片 -->
+		<div class="out_right"><img src="six_max_04.png" class="pic"></div>
+		<!-- 上面图片 -->
+		<div class="out_top"><img src="six_max_05.png" class="pic"></div>
+		<!-- 下面图片 -->
+		<div class="out_bottom"><img src="six_max_06.png" class="pic"></div>
+
+		<!--小正方体 -->
+		<span class="in_front"><img src="six_min_01.png" class="in_pic"></span>
+		<span class="in_back"><img src="six_min_02.png" class="in_pic"></span>
+		<span class="in_left"><img src="six_min_03.png" class="in_pic"></span>
+		<span class="in_right"><img src="six_min_04.png" class="in_pic"></span>
+		<span class="in_top"><img src="six_min_05.png" class="in_pic"></span>
+		<span class="in_bottom"><img src="six_min_06.png" class="in_pic"></span>
+	</div>
+	</div>
+</div>
+<body class="home blog custom-background round-avatars" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<div class="Yarn_Background" style="background-image: url(47fb3c_.jpg);"></div>
+<form class="js-search search-form search-form--modal" method="get" action="#" role="search">
+    <div class="search-form__inner">
+        <div>
+            <div id="search-container" class="ajax_search">
+                
+                    <div class="filter_container"><input type="text" value="" autocomplete="off" placeholder="Type then select or enter" name="s" id="search-input">
+                        <ul id="search_filtered" class="search_filtered"></ul>
+                    </div>
+                    <input type="submit" name="submit" id="searchsubmit" class="searchsubmit" value="">
+                
+            </div>
+        </div>
+    </div></form>
+
+<div class="navi aos-init aos-animate open" data-aos="fade-down">
+    <div class="bt-nav">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+    <div class="navbar animated fadeInRight">
+        <div class="inner">
+            <nav id="site-navigation" class="main-navigation">
+                <div id="main-menu" class="main-menu-container">
+                    <div class="menu-menu-container">
+                        <ul id="primary-menu" class="menu">
+                            <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17">
+                                <a href="#">首页</a>
+                            </li>
+                            <li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
+                                <a href="#">个人信息</a>
+                            </li>
+                            <li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
+                                <a href="#">更新</a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+        </div>
+    </div>
+</div>
+<div class="hebin aos-init aos-animate" data-aos="fade-down">
+    <i class=" js-toggle-search iconfont"></i>
+</div>
+<header id="masthead" class="overlay animated from-bottom animation-on" itemprop="brand">
+    <div class="site-branding text-center">
+        <a href="#">
+            <figure>
+                <img class="custom-logo avatar" src="omikron.jpg">
+            </figure>
+        </a>
+        <h3 class="blog-description"><p>代码的搬运工/复制粘贴侠/直懒癌！</p></h3>
+    </div>
+    <div class="decor-part">
+        <div id="particles-js"><canvas class="particles-js-canvas-el" width="1919" height="440" style="width: 100%; height: 100%;"></canvas></div>
+    </div>
+    <div class="animation-header">
+        <div class="decor-wrapper">
+            <svg id="header-decor" class="decor bottom" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
+                <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
+                <path class="medium left" d="M0 100 L50 50 L0 33.3" fill="rgba(255,255,255, .3)"></path>
+                <path class="medium right" d="M100 100 L50 50 L100 33.3" fill="rgba(255,255,255, .3)"></path>
+                <path class="small left" d="M0 100 L50 50 L0 66.6" fill="rgba(255,255,255, .5)"></path>
+                <path class="small right" d="M100 100 L50 50 L100 66.6" fill="rgba(255,255,255, .5)"></path>
+                <path d="M0 99.9 L50 49.9 L100 99.9 L0 99.9" fill="rgba(255,255,255, 1)"></path>
+                <path d="M48 52 L50 49 L52 52 L48 52" fill="rgba(255,255,255, 1)"></path>
+            </svg>
+        </div>
+    </div>
+</header>
+<div id="main" class="content">
+    <div class="container">
+        <div id="main" class="content">
+	<div class="container">
+		<article id="post-1202" class="js-gallery post-1202 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-11 tag-22 tag-29">
+			<style>
+				.container {
+					padding: 10px 0px;
+				}
+				.post {
+					margin: 0 auto
+				}
+			</style>
+			<section class="post_content">
+				<header class="post_header">
+					<h1 class="post_title">ESP32点阵屏时钟</h1>
+				</header>
+				<div class="post-body js-gallery">
+					<p><h1>硬件部分</h1></p>
+                    <p>原理图（第一张图为主板原理图第二张为点阵屏原理图）：</p>
+                    <img src="z.png" alt="">
+                    <img src="x.png" alt="">
+				<div class="meta split split--responsive cf">
+				  <p>资料整理中........</p>
+				</div>
+			</section>
+		</article>
+	</div>
+	<svg id="upTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 0 L50 100 L100 0 Z"></path>
+	</svg>
+	<svg id="dwTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 0 L50 100 L100 0 Z"></path>
+	</svg>
+</div>
+
+<div class="navpost-part">
+	<div id="NextPrevPosts">
+		<div class="prev aos-init aos-animate" data-aos="slide-right" data-aos-delay="1.5s">
+			<div class="arrow"><i class="iconfont"><img src="right.jpg" alt="right"></i></div>
+			<div class="preview">
+				<div class="pull-left featuredImg" style="background-image:url(six_max_01.png);"></div>
+				<a class="pull-left preview-content bold" href="#"><span>命里有时终须有，</span></a>
+			</div>
+		</div>
+		<div class="next aos-init aos-animate" data-aos="slide-left" data-aos-delay="1.5s">
+			<div class="arrow"><i class="iconfont"><img src="left.jpg" alt="left"></i></div>
+			<div class="preview">
+				<div class="pull-right featuredImg" style="background-image:url(six_max_05.png);"></div>
+				<a class="pull-right preview-content bold" href="#"><span>命里无时莫强求。</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+    </div>
+</div>
+
+
+
+<footer id="footer" class="overlay animated from-top">
+    <div class="decor-wrapper">
+        <svg id="footer-decor" class="decor top" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
+            <path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
+            <path class="medium left" d="M0 0 L50 50 L0 66.6" fill="rgba(255,255,255, .3)"></path>
+            <path class="medium right" d="M100 0 L50 50 L100 66.6" fill="rgba(255,255,255, .3)"></path>
+            <path class="small left" d="M0 0 L50 50 L0 33.3" fill="rgba(255,255,255, .5)"></path>
+            <path class="small right" d="M100 0 L50 50 L100 33.3" fill="rgba(255,255,255, .5)"></path>
+            <path d="M0 0 L50 50 L100 0 L0 0" fill="rgba(255,255,255, 1)"></path>
+            <path d="M48 48 L50 51 L52 48 L48 48" fill="rgba(255,255,255, 1)"></path>
+        </svg>
+    </div>
+    <div class="socialize aos-init" data-aos="zoom-in">
+        <li class="wechat">
+            <a class="socialicon"><i class="iconfont"><img src="wxlogo.jpg" alt="微信"></i></a>
+            <div class="wechatimg"><img src="wx.png"></div>
+        </li>
+		<li class="wechat">
+            <a class="socialicon"><i class="iconfont"><img src="qqlogo.jpg" alt="QQ"></i></a>
+            <div class="wechatimg"><img src="qq.jpg"></div>
+        </li>
+		<li class="wechat">
+            <a class="socialicon" href="https://space.bilibili.com/452272599" target="_blank"><i class="iconfont"><img src="blibli.png" alt="blibli"></i></a>
+            <div class="wechatimg"><img src="blilbil.png"></div>
+        </li>
+		<li class="wechat">
+            <a class="socialicon" href="https://github.com/garbagechi" target="_blank"><i class="iconfont"><img src="github.png" alt="GitHub"></i></a>
+        </li>
+		<li class="wechat">
+            <a class="socialicon" href="https://weibo.com/u/5846258602?is_all=1" target="_blank"><i class="iconfont"><img src="wb.jpg" alt="weibo"></i></a>
+        </li>
+		
+    </div>
+    <div class="cr">
+        版权所有©2017-
+        <script>document.writeln(new Date().getFullYear())</script>
+
+        . 垃圾馳&nbsp;&nbsp;
+        <a href="#"> </a>
+    </div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="plugins.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="aos.js"></script>
+</footer>
+
+
+</body></html>
